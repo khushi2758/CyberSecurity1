@@ -1,6 +1,9 @@
+import './home.css'
 function Home()  {
     return (
-      <h1>HomePage</h1>
+      <button class="btns">
+  <span>Get started</span>
+</button>
     )
   }
   
