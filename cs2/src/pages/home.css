@@ -1,12 +1,13 @@
+@import "tailwindcss";
 .btns {
-    --fancy-button-gradient-0: #8d49fd;
-    --fancy-button-gradient-50: #7f56f3;
-    --fancy-button-gradient-100: #5691f3;
-    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
-    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
-    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
-    --fancy-button-shine-top: #e9d1ff;
-    --fancy-button-shine-bottom: #adfff9;
+    --fancy-button-gradient-0: #231c60;
+    --fancy-button-gradient-50: #14393f;
+    --fancy-button-gradient-100:#52529b;
+    --fancy-button-inner-shadow-top: rgba(14, 1, 26, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(23, 149, 134, 0.601);
+    --fancy-button-inner-shadow-bottom: rgba(4, 55, 69, 0.3);
+    --fancy-button-shine-top: #fcfeff;
+    --fancy-button-shine-bottom: #e8d4e7;
     font-weight: 500;
     font-size: 15px;
     line-height: 21px;
