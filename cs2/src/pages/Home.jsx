@@ -1,29 +1,65 @@
-import './home.css'
-import IMG from '../assets/CEO.png'
-function Home()  {
-    return (<div className='flex flex-row items-center  h-screen pl-60 '>
-      
-     <div className='flex-1 shiny-border' > <h1 class="text-5xl font-extrabold bg-gradient-to-r from-purple-900 to-cyan-600 bg-clip-text text-transparent text-clip mb-1.5">Stay Safe Online - </h1>
-     <h1 class="text-5xl font-extrabold text-clip pb-7"> Check Any URL <br/>Before You click </h1>
-      <h1 class=" text-gray-500 font-extrabol text-clip mt-2">Protect Yourself from Phishing Attacks.  </h1>
-      <p className="text-lg text-gray-600 mt-1 mb-3 pb-7">
-                    The internet is a vast space filled with opportunities, but it also comes with risks. 
-                    Phishing attacks are one of the most common threats, targeting unsuspecting users to steal sensitive information.
-                    </p>
-     {/* <p className="text-lg text-gray-600 mt-1 pb-7">
-                    Our tool empowers you to check any URL before clicking, ensuring your online safety and peace of mind.
-                    </p>*/}
-      <button class="btns ">
+import React from "react";
+import { motion } from "framer-motion";
+const textVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
 
-  <span  >Get Start</span>
+const subtextVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { delay: 0.5, duration: 1 } },
+};
 
-</button>
+const buttonVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { delay: 1, duration: 0.5 } },
+  hover: { scale: 1.1 },
+};
 
-
-</div>
-<div className='flex-1'><img src={IMG} alt="ROBO" /></div>
-</div>
-    )
-  }
+const Home = () => {
+  return (
+   
+      <div className="relative text-slate h-screen w-full bg-cover bg-center bg-no-repeat t" style={{ backgroundImage: "url('/bg.jpg')" }}>
+        
+       
+        <div className="absolute inset-0 bg-black/20 z-0" />
   
-  export default Home
+  
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+          
+
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl text-rose-200/90 shadow:black md:text-5xl font-bold"
+          >
+            STAY SAFE
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="mt-4 text-lg md:text-xl"
+          >
+            Online any URL before you click!
+          </motion.p>
+  
+
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            className="mt-8 px-6 py-3 bg-cyan-300/50 text-slate font-bold rounded-xl shadow-lg hover:bg-rose-200/60 transition duration-300"
+          >
+            GET STARTED
+          </motion.button>
+        </div>
+      </div>
+    );
+
+};
+
+export default Home;
