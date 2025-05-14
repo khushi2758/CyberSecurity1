@@ -7,7 +7,8 @@ import Update from './pages/Update';
 function App() {
   const router = createBrowserRouter([
     {path:'/', element:  <RootLayout/>, children: [
-      {path:'/Home', element : <Home />},
+      {index:true, element : <Home />},
+      {path:"Home", element : <Home />},
       {path: '/Tools', element : <Tools/>},
       {path: '/Tos', element : <Tos/>},
       {path: '/Update', element : <Update/>},
